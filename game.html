@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Game </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <button> <a href="http://asktechspace.com/testgame/game.php"> View game with leaderboard </a></button>
+    <div id="intro" style="text-align:center; font-size: 32px;"></div>
+    <div id="skip">
+        <button><a href="http://sunnybarcheonho.com"> To skip click here</a></button>
+    </div>
+    <script>
+        $(window).load(function() {
+            var txt;
+            var person = prompt("Please enter your name:", "");
+
+            window.person = person;
+            if (person == null || person == "") {
+                txt = "Hello guest!  You have 60 seconds to collect as much as you can!";
+            } else {
+                txt = "Hello " + person + "! You have 60 seconds to collect as much as you can!";
+            }
+            document.getElementById("intro").innerHTML = txt;
+            document.getElementById("person").innerHTML = person;
+        });
+    </script>
+
+    <script src="game.js">
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
